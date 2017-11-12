@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+	<head>
+	</head>
+	<body>
+		<h1> Flow of Money to Donald J. Trump </h1>
+		<table>
+			<tbody>
+				<tr>
+					<th>Specific Business</th>
+					<th>General Industry</th>
+					<th>Broad Sector</th>
+					<th>Total contributions(USD)</th>
+				</tr>
+				{% for row in theDict["records"]%}
+					<tr>
+						<td>{{row['Specific_Business']['Specific_Business']}}</td>
+						<td>{{row['General_Industry']['General_Industry']}}</td>
+						<td>{{row['Broad_Sector']['Broad_Sector']}}</td>
+						<td>{{row["Total_$"]["Total_$"]}}</td>
+					</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+	</body>
